@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: dwh_bike_trips
+    description: Model contains combined data for cities. It will serve as base model for further analysis. Base of this model is staging models. 
+    columns:
+        - name: bike_id 
+          description: '{{ doc("bike_description") }}' 
+        - name: duration
+          description: '{{ doc("duration_description")  }} in minutes'
+        - name: start_time
+          description: '{{ doc("starttime_description") }} in UTC' 
+        - name: end_time
+          description: '{{ doc("endtime_description") }} in UTC' 
+        - name: start_station_name
+          description: '{{ doc("start_station_name_description") }}'
+        - name: end_station_name
+          description: '{{ doc("end_station_name_description") }}'
+        - name: hour
+          description: Hour of day whe trip starts
+        - name: week
+          description: Week number of year when trip starts
+        - name: week_day
+          description: Week day number of week when trip starts
+        - name: month
+          description: month of year when trip starts
+        - name: quarter
+          description: Quarter when trip starts
+        - name: year
+          description: Year when trip starts
+        - name: subscriber_type
+          description: longitude of station from where trip was ended
+        - name: usertype          
+        - name: birth_year
+          description:  Birth year of the user
+        - name: gender
+          description: Gender of the rider. Male, Female, Unknown
+        - name: age
+          description: age of the rider
+        - name: city
+          description: City where bike ride starts
+  
