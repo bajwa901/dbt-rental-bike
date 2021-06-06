@@ -25,7 +25,7 @@ Data set is public dataset available in bigquery public dataset project. Followi
 3.  bigquery-public-data:austin_bikeshare.bikeshare_trips
 
 ## Architecture
-Following is the architecture diagram of the project. I have extended following diagram according to my requirements.
+Following is the architecture diagram of the project. I have extended following diagram according to task requirements.
 ![GitHub Logo](/images/dbt-arch.png)
 ## Modeling
 ![GitHub Logo](/images/Modeling.PNG)
@@ -36,39 +36,44 @@ I have use ELT appraoch to solve this problem. This approach was used beacuse ra
 I have setup virtual machine on azure using terraform and done required installations. Dbt docs are also generated and hosted on machine. Link to the dbt docs is http://40.88.5.13:8080. Incase if link is not working that might be due to hosted machine is down. You can reach me out, I will make sure machine is up and link is working as expected.
 
 ## Cases
-Link to the dashboard [a link](https://datastudio.google.com/s/qVaAqNrFE6U).
+Link to the dashboard [link](https://datastudio.google.com/reporting/c1de4bd1-a4e3-45b6-83fa-fe46e9e502bb).
 
 1. Top 20 performing stations last week, globally, in terms of rides started or duration of
 rides started.
+
 ![GitHub Logo](/images/Q1.PNG)
+
 2. Most successful subscriber_type, year on year comparison (in terms of ride duration
 minutes)
-| ![GitHub Logo](/images/Q2-a.PNG)    |:  ![GitHub Logo](/images/Q2-b.PNG) :|
+
+![GitHub Logo](/images/Q2-a.PNG)    
 
 3. Break-down of last months riders, by age / gender groups (think bar charts)
+
 ![GitHub Logo](/images/Q3.PNG)  
+
 4. Top Cities last month in terms of rides / duration
+
 ![GitHub Logo](/images/Q4.PNG)  
 
 
 ## Conclusion
+By analysing the rental bike data I have following observations
+1. Males are dominant and are large in number when it comes to rent/ride bike.
+2. Peak times are from 7 AM to 8 AM and 5 PM to 6 PM.
+3. There is trend in rides, number of rides increases in summer and decreased in winter.
+4. Top performing subscribers are in terms of Duration
 
+    1. Try before you Buy Special
+    2. Walk Up
+    3. Explorere ($8 plus tax)
 
-
-
-
-
-
-
-
-Try running the following commands:
-- dbt run
-- dbt test
+![GitHub Logo](/images/dashboard.jpg)  
 
 
 ### Reference:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- https://raw.githubusercontent.com/fishtown-analytics/dbt/6c6649f9129d5d108aa3b0526f634cd8f3a9d1ed/etc/dbt-arch.png
+- Architecture [Diagram]https://raw.githubusercontent.com/fishtown-analytics/dbt/6c6649f9129d5d108aa3b0526f634cd8f3a9d1ed/etc/dbt-arch.png
 - https://www.youtube.com/watch?v=snp2hxxWgqk&t=1s
 - Find [dbt events](https://events.getdbt.com) near you
 - Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
