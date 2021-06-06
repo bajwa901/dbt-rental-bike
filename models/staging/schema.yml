@@ -1,0 +1,40 @@
+version: 2
+
+sources:
+  - name: new_york_citibike
+    description: '{{ doc("new_york") }}'
+    tables:
+      - name: citibike_trips
+        description: '{{ doc("table_description") }}'
+        columns:
+        - name: bikeid 
+          description: '{{ doc("bike_description") }}' 
+        - name: tripduration
+          description: '{{ doc("duration_description")  }} in seconds'
+        - name: starttime
+          description: '{{ doc("starttime_description") }} in NYC local time' 
+        - name: stoptime
+          description: '{{ doc("endtime_description") }} in NYC local time' 
+        - name: start_station_id
+          description: '{{ doc("start_station_id_description") }}'
+        - name: start_station_name
+          description: '{{ doc("start_station_name_description") }}'
+        - name: end_station_id
+          description: '{{ doc("end_station_id_description") }}'
+        - name: end_station_name
+          description: '{{ doc("end_station_name_description") }}'
+        - name: start_station_latitude
+          description: latitude of station from where trip was started
+        - name: start_station_longitude
+          description: longitude of station from where trip was started
+        - name: end_station_latitude
+          description: latitude of station from where trip was ended
+        - name: end_station_longitude
+          description: longitude of station from where trip was ended
+        - name: usertype          
+        - name: birth_year
+          description:  Birth year of the user
+        - name: gender
+          description: Gender of the rider. Male, Female, Unknown
+        - name: customer_plan
+ 
