@@ -67,3 +67,30 @@ sources:
         - name: end_station_logical_terminal          
         - name: start_station_logical_terminal          
         - name: end_station_priority_id
+
+
+
+  - name: austin_bikeshare
+    description: '{{ doc("austin") }}'
+    tables:
+      - name: bikeshare_trips
+        description: '{{ doc("table_description") }}'
+        columns:
+        - name: bikeid
+          description: '{{ doc("bike_description") }}'
+        - name: duration_minutes
+          description: '{{ doc("duration_description")  }} in minutes'
+        - name: start_time
+          description: '{{ doc("starttime_description") }} in UTC'
+        - name: start_station_id
+          description: '{{ doc("start_station_id_description") }}'
+        - name: start_station_name
+          description: '{{ doc("start_station_name_description") }}'
+        - name: end_station_id
+          description: '{{ doc("end_station_id_description") }}'
+        - name: end_station_name
+          description: '{{ doc("end_station_name_description") }}'
+        - name: trip_id
+          description: Unique identifier for trip
+        - name: subscriber_type
+          description: Subcription type of the rider. For Example Walk up , Explorer, Single Trip Rider
