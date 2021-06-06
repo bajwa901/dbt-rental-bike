@@ -25,18 +25,30 @@ Data set is public dataset available in bigquery public dataset project. Followi
 3.  bigquery-public-data:austin_bikeshare.bikeshare_trips
 
 ## Architecture
-Following is the architecture diagram of the project
+Following is the architecture diagram of the project. I have extended following diagram according to my requirements.
 ![GitHub Logo](/images/dbt-arch.png)
 ## Modeling
 ![GitHub Logo](/images/Modeling.PNG)
 
 ## Approach
-We have use ELT appraoch to solve this problem. This approach was used beacuse raw data was already extracted and loaded in biqquery, we were required to transformed and analyse data. We have build the dataware house in bigquery using dbt and git hub with best practices. Workflow is automated using git hub actions. 
+I have use ELT appraoch to solve this problem. This approach was used beacuse raw data was already extracted and loaded in biqquery, I was required to transformed and analyse data. I have build the dataware house in bigquery using dbt and git hub with best practices. Workflow is automated using git hub actions. 
+
+I have setup virtual machine on azure using terraform and done required installations. Dbt docs are also generated and hosted on machine. Link to the dbt docs is http://40.88.5.13:8080. Incase if link is not working that might be due to hosted machine is down. You can reach me out, I will make sure machine is up and link is working as expected.
 
 ## Cases
+Link to the dashboard [a link](https://datastudio.google.com/s/qVaAqNrFE6U).
 
+1. Top 20 performing stations last week, globally, in terms of rides started or duration of
+rides started.
+![GitHub Logo](/images/Q1.PNG)
+2. Most successful subscriber_type, year on year comparison (in terms of ride duration
+minutes)
+![GitHub Logo](/images/Q2-a.PNG)                          ![GitHub Logo](/images/Q2-b.PNG)
 
-
+3. Break-down of last months riders, by age / gender groups (think bar charts)
+![GitHub Logo](/images/Q3.PNG)  
+4. Top Cities last month in terms of rides / duration
+![GitHub Logo](/images/Q4.PNG)  
 
 
 ## Conclusion
