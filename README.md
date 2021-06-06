@@ -19,9 +19,10 @@ minutes)
 
  ## Data ##
 Data set is public dataset available in bigquery public dataset project. Following are the links to the data
-● bigquery-public-data:new_york_citibike.citibike_trips
-● bigquery-public-data:london_bicycles.cycle_hire
-● bigquery-public-data:austin_bikeshare.bikeshare_trips
+
+1.  bigquery-public-data:new_york_citibike.citibike_trips
+2.  bigquery-public-data:london_bicycles.cycle_hire
+3.  bigquery-public-data:austin_bikeshare.bikeshare_trips
 
 ## Architecture
 Following is the architecture diagram of the project
@@ -30,6 +31,7 @@ Following is the architecture diagram of the project
 ![GitHub Logo](/images/Modeling.PNG)
 
 ## Approach
+We have use ELT appraoch to solve this problem. This approach was used beacuse raw data was already extracted and loaded in biqquery, we were required to transformed and analyse data. We have build the dataware house in bigquery using dbt and git hub with best practices. Workflow is automated using git hub actions. 
 
 ## Cases
 
