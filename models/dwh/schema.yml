@@ -8,10 +8,16 @@ models:
           description: '{{ doc("bike_description") }}' 
         - name: duration
           description: '{{ doc("duration_description")  }} in minutes'
+          tests:
+            - not_null
         - name: start_time
           description: '{{ doc("starttime_description") }} in UTC' 
+          tests:
+            - not_null
         - name: end_time
-          description: '{{ doc("endtime_description") }} in UTC' 
+          description: '{{ doc("endtime_description") }} in UTC'
+          tests:
+            - not_null 
         - name: start_station_name
           description: '{{ doc("start_station_name_description") }}'
         - name: end_station_name
@@ -35,8 +41,13 @@ models:
           description:  Birth year of the user
         - name: gender
           description: Gender of the rider. Male, Female, Unknown
+          
         - name: age
           description: age of the rider
         - name: city
           description: City where bike ride starts
+          tests:
+            - not_null
+            - accepted_values:
+                values: ['New York', 'London', 'Austin']
   
