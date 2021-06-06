@@ -8,7 +8,7 @@ with duration_over_month as (
   , FORMAT_DATE("%b %Y",  start_time) month
   , round(avg(duration),2) AS duration
   , count(*) Rides
-  from {{ref('bike_trips')}}
+  from {{ref('dwh_bike_trips')}}
   group by 1, 2, 3
   )
 
