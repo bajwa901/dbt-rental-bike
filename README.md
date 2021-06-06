@@ -67,9 +67,13 @@ rides started.
 
 2. Most successful subscriber_type, year on year comparison (in terms of ride duration
 minutes)
-| A | B |
-| ------ | ------ |
-| ![GitHub Logo](/images/Q2-a.PNG)  | ![GitHub Logo](/images/Q2-b.PNG) |
+
+![GitHub Logo](/images/Q2-a.PNG)   
+
+
+
+
+![GitHub Logo](/images/Q2-b.PNG) 
    
 
 3. Break-down of last months riders, by age / gender groups (think bar charts)
