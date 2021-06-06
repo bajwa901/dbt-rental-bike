@@ -8,8 +8,15 @@ Welcome to dbt bike rental project!
 5. [Cases](#cases)
 6. [Conclusion](#conclusion)
 ### Problem Statement
-***
-Write down general information about your project. It is a good idea to always put a project status in the readme file. This is where you can add it.
+This project is task from Growth Hackers. A customer has acquired bike rental businesses in Austin, London and New York. Now they
+want to build dashboards to better understand their new business empire. Purpose of the project is to built workflow and analyse data using bigwuery, dbt and data studio. Followng analysis is required as part of task
+
+1. Top 20 performing stations last week, globally, in terms of rides started or duration of
+rides started.
+2. Most successful subscriber_type, year on year comparison (in terms of ride duration
+minutes)
+3. Break-down of last months riders, by age / gender groups (think bar charts)
+4. Top Cities last month in terms of rides / duration
 
 ## Architecture
 ***
