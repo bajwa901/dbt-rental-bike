@@ -27,8 +27,8 @@ Data set is public dataset available in bigquery public dataset project. Followi
 Following is the architecture diagram of the project
 
 ## Modeling
-![GitHub Logo](/images/Modeling.png)
-Format: ![Alt Text](url)
+![GitHub Logo](/images/Modeling.PNG)
+
 ## Approach
 
 ## Cases
