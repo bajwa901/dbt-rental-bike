@@ -37,4 +37,33 @@ sources:
         - name: gender
           description: Gender of the rider. Male, Female, Unknown
         - name: customer_plan
- 
+  
+  
+  - name: london_bicycles
+    description: '{{ doc("london") }}'
+    database: bigquery-public-data    
+    tables:
+      - name: cycle_hire
+        description: '{{ doc("table_description") }}'
+        columns:
+        - name: bike_id
+          description: '{{ doc("bike_description") }}'
+        - name: duration 
+          description: '{{ doc("duration_description")  }} in seconds'
+        - name: start_date
+          description: '{{ doc("starttime_description") }} in UTC'
+        - name: end_date
+          description: '{{ doc("endtime_description") }} in UTC'
+        - name: start_station_id
+          description: '{{ doc("start_station_id_description") }}'
+        - name: start_station_name
+          description: '{{ doc("start_station_name_description") }}'
+        - name: end_station_id
+          description: '{{ doc("end_station_id_description") }}'
+        - name: end_station_name
+          description: '{{ doc("end_station_name_description") }}'
+        - name: rental_id
+          description: Unique identifier of single trip
+        - name: end_station_logical_terminal          
+        - name: start_station_logical_terminal          
+        - name: end_station_priority_id
