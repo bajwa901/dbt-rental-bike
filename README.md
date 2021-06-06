@@ -27,7 +27,18 @@ Data set is public dataset available in bigquery public dataset project. Followi
 ## Architecture
 Following is the architecture diagram of the project. I have extended following diagram according to task requirements.
 ![GitHub Logo](/images/dbt-arch.png)
+
 ## Modeling
+Following are the models built
+1. stg_austin_biketrips (Materialization = View)
+2. stg_austin_biketrips (Materialization = View)
+3. stg_austin_biketrips (Materialization = View)
+4. dwh_bike_trips (Materialization = View)
+5. bike_trips (Materialization = Table)
+6. mom_comparison (Materialization = Table)
+7. yoy_comparison (Materialization = Table)
+
+Table materialization is used for the models that are being used built dashboard to make dashboard's response time. Tests are also added for the models.
 ![GitHub Logo](/images/Modeling.PNG)
 
 ## Approach
@@ -73,7 +84,7 @@ By analysing the rental bike data I have following observations
 
 ### Reference:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Architecture [Diagram]https://raw.githubusercontent.com/fishtown-analytics/dbt/6c6649f9129d5d108aa3b0526f634cd8f3a9d1ed/etc/dbt-arch.png
+- Architecture [Diagram](https://raw.githubusercontent.com/fishtown-analytics/dbt/6c6649f9129d5d108aa3b0526f634cd8f3a9d1ed/etc/dbt-arch.png)
 - https://www.youtube.com/watch?v=snp2hxxWgqk&t=1s
 - Find [dbt events](https://events.getdbt.com) near you
 - Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
