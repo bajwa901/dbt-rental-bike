@@ -1,0 +1,30 @@
+name: Prod_Deployment
+
+on:
+  push:
+    branches:
+      - master
+env:
+    DBT_PROFILE_SA_PK: ${{ secrets.DBT_PROFILE_SA_PK }}
+
+jobs:
+  deploy_dev:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.7]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install dbt
+    - name: deploy to prod
+      run: |
+        dbt run --profiles-dir=workflow_profiles --target=prod
+        dbt test --profiles-dir=workflow_profiles --target=prod
