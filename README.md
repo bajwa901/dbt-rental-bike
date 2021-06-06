@@ -9,7 +9,7 @@ Welcome to dbt bike rental project!
 6. [Conclusion](#conclusion)
 7. [Reference](#reference)
 
-:  - - - -
+
 
 ### Problem Statement
 This project is task from Growth Hackers. A fictinal customer has acquired bike rental businesses in Austin, London and New York. Now they want to build dashboards to better understand their new business empire. Purpose of the project is to built workflow and analyse data using bigquery, dbt and data studio. Followng analysis is required as part of task
@@ -28,7 +28,7 @@ Data set is public dataset available in bigquery public dataset project. Followi
 2.  bigquery-public-data:london_bicycles.cycle_hire
 3.  bigquery-public-data:austin_bikeshare.bikeshare_trips
 
-:  - - - -
+
 
 ## Architecture
 Following is the architecture diagram of the project. I have extended following diagram according to task requirements.
@@ -47,7 +47,7 @@ Following are the models built
 Table materialization is used for the models that are being used built dashboard to make dashboard's response time. Tests are also added for the models.
 ![GitHub Logo](/images/Modeling.PNG)
 
-:  - - - -
+
 
 
 ## Approach
@@ -55,7 +55,7 @@ I have use ELT appraoch to solve this problem. This approach was used beacuse ra
 
 I have setup virtual machine on azure using terraform and done required installations. Dbt docs are also generated and hosted on machine. Link to the dbt docs is http://40.88.5.13:8080. In case if link is not working that might be due to hosted machine is down. You can reach me out, I will make sure machine is up and link is working as expected.
 
-:  - - - -
+
 
 ## Cases
 Link to the dashboard [link](https://datastudio.google.com/reporting/c1de4bd1-a4e3-45b6-83fa-fe46e9e502bb).
@@ -64,21 +64,23 @@ Link to the dashboard [link](https://datastudio.google.com/reporting/c1de4bd1-a4
 rides started.
 
 ![GitHub Logo](/images/Q1.PNG)
-:  - - - -
+
 2. Most successful subscriber_type, year on year comparison (in terms of ride duration
 minutes)
-:  - - - -
-![GitHub Logo](/images/Q2-a.PNG)    
-:  - - - -
+| A | B |
+| ------ | ------ |
+| ![GitHub Logo](/images/Q2-a.PNG)  | ![GitHub Logo](/images/Q2-b.PNG) |
+   
+
 3. Break-down of last months riders, by age / gender groups (think bar charts)
 
 ![GitHub Logo](/images/Q3.PNG)  
-:  - - - -
+
 4. Top Cities last month in terms of rides / duration
 
 ![GitHub Logo](/images/Q4.PNG)  
 
-:  - - - -
+
 
 ## Conclusion
 By analysing the rental bike data I have following observations
@@ -93,7 +95,7 @@ By analysing the rental bike data I have following observations
 
 ![GitHub Logo](/images/dashboard.jpg)  
 
-:  - - - -
+
 
 ### Reference
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
