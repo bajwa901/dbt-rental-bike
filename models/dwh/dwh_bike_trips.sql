@@ -1,6 +1,6 @@
 {{ config(
     
-    tags=["Combined Bike Trips of cities"]
+    tags=["dwh"]
 ) }}
 
 with ny_biketrip as (

@@ -9,10 +9,7 @@ Welcome to dbt bike rental project!
 6. [Conclusion](#conclusion)
 ### Problem Statement
 ***
-Write down general information about your project. It is a good idea to always put a project status in the readme file. This is where you can add it. 
-### Screenshot
-![Image text](https://www.united-internet.de/fileadmin/user_upload/Brands/Downloads/Logo_IONOS_by.jpg)
-
+Write down general information about your project. It is a good idea to always put a project status in the readme file. This is where you can add it.
 
 ## Architecture
 ***
@@ -20,6 +17,7 @@ A list of technologies used within the project:
 * [Technology name](https://example.com): Version 12.3 
 * [Technology name](https://example.com): Version 2.34
 * [Library name](https://example.com): Version 1234
+
 ## Modeling
 ***
 A little intro about the installation. 
