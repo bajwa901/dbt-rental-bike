@@ -1,0 +1,73 @@
+version: 2
+
+models:
+  - name: bike_trips
+    description: Model contains data for similar period of time for all the cities for the sake of comparing values between cities. Base of this model is dwh model which contains all the historical data. 
+    columns:
+        - name: bike_id 
+          description: '{{ doc("bike_description") }}' 
+        - name: duration
+          description: '{{ doc("duration_description")  }} in minutes'
+        - name: start_time
+          description: '{{ doc("starttime_description") }} in UTC' 
+        - name: end_time
+          description: '{{ doc("endtime_description") }} in UTC' 
+        - name: start_station_name
+          description: '{{ doc("start_station_name_description") }}'
+        - name: end_station_name
+          description: '{{ doc("end_station_name_description") }}'
+        - name: hour
+          description: Hour of day whe trip starts
+        - name: week
+          description: Week number of year when trip starts
+        - name: week_day
+          description: Week day number of week when trip starts
+        - name: month
+          description: month of year when trip starts
+        - name: quarter
+          description: Quarter when trip starts
+        - name: year
+          description: Year when trip starts
+        - name: subscriber_type
+          description: longitude of station from where trip was ended
+        - name: usertype          
+        - name: birth_year
+          description:  Birth year of the user
+        - name: gender
+          description: Gender of the rider. Male, Female, Unknown
+        - name: age
+          description: age of the rider
+        - name: city
+          description: City where bike ride starts
+  - name: mom_comparison
+    description: Model is to compare values from previoius month. MOM comparison
+    columns:
+        - name: month_number 
+          description: This column is used for order of the months in which they appear on google data studio 
+        - name: duration
+          description: '{{ doc("duration_description")  }} in minutes'
+        - name: rides
+          description: Number of rides in a single month
+        - name: month
+          description: Month of the year. For example Feb 2015, Jan 2016
+        - name: duration_growth_rate
+          description: Columns represents the growth rate of avg duration from previous month
+        - name: rides_growth_rate
+          description: Columns represents the growth rate of rides from previous month
+
+  - name: yoy_comparison
+    description: Model is to compare values from previoius year. YOY comparison
+    columns:
+        - name: duration
+          description: '{{ doc("duration_description")  }} in seconds'
+        - name: rides
+          description: Number of rides in a single month
+        - name: year
+          description: year. For example 2015, 2016
+        - name: duration_growth_rate
+          description: Columns represents the growth rate of avg duration from previous year
+        - name: rides_growth_rate
+          description: Columns represents the growth rate of rides from previous Year
+        
+       
+  
