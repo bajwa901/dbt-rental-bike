@@ -23,20 +23,20 @@ models:
         - name: week_day
           description: Week day number of week when trip starts
         - name: month
-          description: month of year when trip starts
+          description: Month of year when trip starts
         - name: quarter
           description: Quarter when trip starts
         - name: year
           description: Year when trip starts
         - name: subscriber_type
-          description: longitude of station from where trip was ended
+          description: Longitude of station from where trip was ended
         - name: usertype          
         - name: birth_year
           description:  Birth year of the user
         - name: gender
           description: Gender of the rider. Male, Female, Unknown
         - name: age
-          description: age of the rider
+          description: Age of the rider
         - name: city
           description: City where bike ride starts
   - name: mom_comparison
@@ -51,9 +51,9 @@ models:
         - name: month
           description: Month of the year. For example Feb 2015, Jan 2016
         - name: duration_growth_rate
-          description: Columns represents the growth rate of avg duration from previous month
+          description: Column represents the growth rate of avg duration from previous month
         - name: rides_growth_rate
-          description: Columns represents the growth rate of rides from previous month
+          description: Column represents the growth rate of rides from previous month
 
   - name: yoy_comparison
     description: Model is to compare values from previoius year. YOY comparison
@@ -63,11 +63,11 @@ models:
         - name: rides
           description: Number of rides in a single month
         - name: year
-          description: year. For example 2015, 2016
+          description: Year. For example 2015, 2016
         - name: duration_growth_rate
-          description: Columns represents the growth rate of avg duration from previous year
+          description: Column represents the growth rate of avg duration from previous year
         - name: rides_growth_rate
-          description: Columns represents the growth rate of rides from previous Year
+          description: Column represents the growth rate of rides from previous Year
         
        
   

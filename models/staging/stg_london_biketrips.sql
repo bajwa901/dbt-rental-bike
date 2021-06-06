@@ -1,4 +1,4 @@
-with filterDataWithZeroTripDuration as(
+with filter_data_with_zero_trip_duration as(
     Select *
     from {{ source('london_bicycles', 'cycle_hire') }}
     where duration > 0 
@@ -16,10 +16,10 @@ Select  bike_id
 , end_station_logical_terminal
 , start_station_logical_terminal
 , end_station_priority_id
-from filterDataWithZeroTripDuration
+from filter_data_with_zero_trip_duration
 )
 
-, stgLondonBikeTrips as (
+, stg_london_bike_trips as (
 select bike_id
 , start_time
 , end_time
@@ -29,4 +29,4 @@ select bike_id
 
 from transformations
 )
-select * from stgLondonBikeTrips
+select * from stg_london_bike_trips

@@ -1,4 +1,4 @@
-with filterDataWithZeroTripDuration as(
+with filter_data_with_zero_trip_duration as(
     Select *
     from {{ source('new_york_citibike', 'citibike_trips') }}
     where tripduration > 0 
@@ -20,16 +20,16 @@ Select bikeid as bike_id
 , birth_year
 , gender
 , customer_plan
-from filterDataWithZeroTripDuration
+from filter_data_with_zero_trip_duration
 )
-, ageCalculation as (
+, age_calculation as (
 Select 
 *
 , EXTRACT(YEAR from  Current_Date()) - birth_year as age,
 from transformations
 )
 
-, stgNyBikeTrips as (
+, stg_ny_bike_trips as (
 select bike_id
 , start_time
 , end_time
@@ -44,6 +44,6 @@ select bike_id
 , age
 , birth_year
 , gender
-from ageCalculation
+from age_calculation
 )
-select * from stgNyBikeTrips
+select * from stg_ny_bike_trips
