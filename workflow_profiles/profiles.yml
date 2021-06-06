@@ -1,0 +1,49 @@
+rental_bike_dbt:
+  outputs:
+
+    dev:
+      type: bigquery
+      method: service-account-json
+      project: bike-rental-project
+      dataset: dwh_rental_bike_dev
+      threads: 10
+      timeout_seconds: 300
+      priority: interactive
+
+      # These fields come from the service account json keyfile
+      keyfile_json:
+        type: service_account
+        project_id: bike-rental-project
+        private_key_id: a87fc0511c2110983e11399925cb9623da4e4e5a
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDUZ/zgRO4iJw0+\n3nBF3+JbS5duImDw5yeGb57aKM6dDzQXYm3tzVqPv08DD/dmxCnWllZ0COrwZu9/\nlwKnLsJ27O8mvqeaOYYXjRjkcPmNhn69sixH6DEAbKsaJ9Gvh+FCPTI9y/yFrlak\nYfWnEXAKrfF4G+dDKDupeVfRzCZ546I/h01NrlfPQor+VSlY44PTgJtN19cOu/Nw\nQVqyJY4wM+Er1sx9hMxh0bfNopUM23WbimEqXko3mQ4CCAUSti27yA17k/GIMDvh\nvmMnCBu9dlJi9Aymv/CnlGFIvv28JtE03i3/9Rqd3bjlOeFrbF65MJy6NmE0X7Z7\nWW2roTkdAgMBAAECggEACkWwkNVvxJz2ksaiqUc7aCnKD14GkETGYFKUtqolDd4l\nNiFN12OOrU3o+UKww6dM4UjnGIvK3IJgTRKySRmlkKdP2Vcvyor2ijwjl7Hczvee\nnwSkIa+GWSX1Cc0ifENaK6aQGYJJOnTU0cFycvID5PxTDBMIMBlpkAr86iBEcLE9\np0dNui11qKYdNoacFGO6fDjq9do0dlUH1v+HrT4+JQdKillWtOYRKWkcDSmkO3hP\nXYjynnaHgtTyJblF39ifEq2A2I05dpC8qDd2ox1RAmsDR+a3d15xy3m9QO7g1nnA\n/zBKPRFV/19eMO7KldsqZup93ZVky+HsL/4nIV+5MQKBgQDvBFkUsSiTrh6m2HqH\nVABQoPcIJGG1q06oS2zRgNJEjhEIQKBKz5AWdXeQ5ovtcX9WyLFuY7DnvDhvaVIH\nD3qJvMkrKOnGf4rqyuJSWD7otGBNzlMSmDbx7AxD6nhh7JSthMKGLSZjfKe2EWJS\nPAXuPpIvmx4XebqCO0qIosGHzQKBgQDjf5je79KlKkgZlTMABUQ3WVbv0ims46O4\nKIcmsMCXlXXSbPQE9TPCfS9mGrKg0CcH3m7Z4783jiPWPwmEjjln3sD0d721oC4x\nlpj06DuKggCqiCI7vrt+/tXkEku/fsSivMk/I7KhR8xSKSyQvobHiyxkHAI4Csju\nfKpioKaGkQKBgEeQ7rdSYErvvL/KW82/aiS6PZ1Tf2os8+1SQC/uuYbLXvAwoY4k\n3gjLfVSGo2kiLbWne/EIqoSIiAFb8LKqgM9TFoz0wCKuN8Mbom5ze8qjj55cY+VS\nbEk9m2KOhyMS+mWGNdSFGlR5k6HhTKZA0KnIVG8qq/TtftnVtPh6eyYVAoGBAK2/\ntPyHg4S7fydyyOm6G/h91iUBiOzPSyoKYfZNxjm/X6Yfqlri/u4KeBnuSAEEGNss\nqdLl2xPODlbB/D3t9a/787iCfzRpKv6aeyWI/Hhzg5i6shKZQE/kx20SACI36mwz\n7Su40uPUlxsk8TF3Ii7ifzvSHGu66O0j72m2MpjRAoGBAK9f38cKqbpThk5a9spI\n2b84UDiPAYnxDSHDxbPfzIpXu+CVQOR8ett8W8Nt9C06MUJBV3BdoYaa+tO469jC\nLFSsCYVDopg6MxDI3ql6IXCT4PO4W0qp6LeXY7dAsAQviCKQI8K7XRT87EyFDAPS\nSXyCMq8Zw62IMjfkU0gJroA5\n-----END PRIVATE KEY-----\n"
+        client_email: svc-rental-bike-prod@bike-rental-project.iam.gserviceaccount.com
+        client_id: "117547666473949887551"
+        auth_uri: https://accounts.google.com/o/oauth2/auth
+        token_uri: https://oauth2.googleapis.com/token
+        auth_provider_x509_cert_url: https://www.googleapis.com/oauth2/v1/certs
+        client_x509_cert_url: https://www.googleapis.com/robot/v1/metadata/x509/svc-rental-bike-prod%40bike-rental-project.iam.gserviceaccount.com
+
+
+    prod:
+     type: bigquery
+     method: service-account-json
+     project: bike-rental-project
+     dataset: dwh_rental_bike_prod
+     threads: 10
+     timeout_seconds: 300
+     priority: interactive
+
+     keyfile_json:
+        type: service_account
+        project_id: bike-rental-project
+        private_key_id: a87fc0511c2110983e11399925cb9623da4e4e5a
+        private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDUZ/zgRO4iJw0+\n3nBF3+JbS5duImDw5yeGb57aKM6dDzQXYm3tzVqPv08DD/dmxCnWllZ0COrwZu9/\nlwKnLsJ27O8mvqeaOYYXjRjkcPmNhn69sixH6DEAbKsaJ9Gvh+FCPTI9y/yFrlak\nYfWnEXAKrfF4G+dDKDupeVfRzCZ546I/h01NrlfPQor+VSlY44PTgJtN19cOu/Nw\nQVqyJY4wM+Er1sx9hMxh0bfNopUM23WbimEqXko3mQ4CCAUSti27yA17k/GIMDvh\nvmMnCBu9dlJi9Aymv/CnlGFIvv28JtE03i3/9Rqd3bjlOeFrbF65MJy6NmE0X7Z7\nWW2roTkdAgMBAAECggEACkWwkNVvxJz2ksaiqUc7aCnKD14GkETGYFKUtqolDd4l\nNiFN12OOrU3o+UKww6dM4UjnGIvK3IJgTRKySRmlkKdP2Vcvyor2ijwjl7Hczvee\nnwSkIa+GWSX1Cc0ifENaK6aQGYJJOnTU0cFycvID5PxTDBMIMBlpkAr86iBEcLE9\np0dNui11qKYdNoacFGO6fDjq9do0dlUH1v+HrT4+JQdKillWtOYRKWkcDSmkO3hP\nXYjynnaHgtTyJblF39ifEq2A2I05dpC8qDd2ox1RAmsDR+a3d15xy3m9QO7g1nnA\n/zBKPRFV/19eMO7KldsqZup93ZVky+HsL/4nIV+5MQKBgQDvBFkUsSiTrh6m2HqH\nVABQoPcIJGG1q06oS2zRgNJEjhEIQKBKz5AWdXeQ5ovtcX9WyLFuY7DnvDhvaVIH\nD3qJvMkrKOnGf4rqyuJSWD7otGBNzlMSmDbx7AxD6nhh7JSthMKGLSZjfKe2EWJS\nPAXuPpIvmx4XebqCO0qIosGHzQKBgQDjf5je79KlKkgZlTMABUQ3WVbv0ims46O4\nKIcmsMCXlXXSbPQE9TPCfS9mGrKg0CcH3m7Z4783jiPWPwmEjjln3sD0d721oC4x\nlpj06DuKggCqiCI7vrt+/tXkEku/fsSivMk/I7KhR8xSKSyQvobHiyxkHAI4Csju\nfKpioKaGkQKBgEeQ7rdSYErvvL/KW82/aiS6PZ1Tf2os8+1SQC/uuYbLXvAwoY4k\n3gjLfVSGo2kiLbWne/EIqoSIiAFb8LKqgM9TFoz0wCKuN8Mbom5ze8qjj55cY+VS\nbEk9m2KOhyMS+mWGNdSFGlR5k6HhTKZA0KnIVG8qq/TtftnVtPh6eyYVAoGBAK2/\ntPyHg4S7fydyyOm6G/h91iUBiOzPSyoKYfZNxjm/X6Yfqlri/u4KeBnuSAEEGNss\nqdLl2xPODlbB/D3t9a/787iCfzRpKv6aeyWI/Hhzg5i6shKZQE/kx20SACI36mwz\n7Su40uPUlxsk8TF3Ii7ifzvSHGu66O0j72m2MpjRAoGBAK9f38cKqbpThk5a9spI\n2b84UDiPAYnxDSHDxbPfzIpXu+CVQOR8ett8W8Nt9C06MUJBV3BdoYaa+tO469jC\nLFSsCYVDopg6MxDI3ql6IXCT4PO4W0qp6LeXY7dAsAQviCKQI8K7XRT87EyFDAPS\nSXyCMq8Zw62IMjfkU0gJroA5\n-----END PRIVATE KEY-----\n"
+        client_email: svc-rental-bike-prod@bike-rental-project.iam.gserviceaccount.com
+        client_id: "117547666473949887551"
+        auth_uri: https://accounts.google.com/o/oauth2/auth
+        token_uri: https://oauth2.googleapis.com/token
+        auth_provider_x509_cert_url: https://www.googleapis.com/oauth2/v1/certs
+        client_x509_cert_url: https://www.googleapis.com/robot/v1/metadata/x509/svc-rental-bike-prod%40bike-rental-project.iam.gserviceaccount.com
+
+
+  target: dev
