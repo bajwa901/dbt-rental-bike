@@ -12,7 +12,7 @@ Welcome to dbt bike rental project!
 
 
 ### Problem Statement
-This project is task from Growth Hackers. A fictinal customer has acquired bike rental businesses in Austin, London and New York. Now they want to build dashboards to better understand their new business empire. Purpose of the project is to built workflow and analyse data using bigquery, dbt and data studio. Followng analysis is required as part of task
+This project is task from Growth Hackers Stockholm. A fictinal customer has acquired bike rental businesses in Austin, London and New York. Now they want to build dashboards to better understand their new business empire. Purpose of the project is to built workflow and analyse data using bigquery, dbt and data studio. Followng analysis is required as part of task
 
 1. Top 20 performing stations last week, globally, in terms of rides started or duration of
 rides started.
