@@ -55,7 +55,11 @@ I have use ELT appraoch to solve this problem. This approach was used beacuse ra
 
 I have setup virtual machine on azure using terraform and done required installations. Dbt docs are also generated and hosted on machine. Link to the dbt docs is http://40.88.5.13:8080. In case if link is not working that might be due to hosted machine is down. You can reach me out, I will make sure machine is up and link is working as expected.
 
-
+Following points are implemented 
+1. Data Filteration
+2. Time conversion
+3. Unit conversion
+4. Adding Columns
 
 ## Cases
 Link to the dashboard [link](https://datastudio.google.com/reporting/c1de4bd1-a4e3-45b6-83fa-fe46e9e502bb).
