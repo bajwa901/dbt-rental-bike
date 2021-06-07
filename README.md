@@ -53,7 +53,7 @@ Table materialization is used for the models that are being used built dashboard
 ## Approach
 I have use ELT appraoch to solve this problem. This approach was used beacuse raw data was already extracted and loaded in biqquery, I was required to transformed and analyse data. I have build the dataware house in bigquery using dbt and git hub with best practices. Workflow is automated using git hub actions. 
 
-I have setup virtual machine on azure using terraform and done required installations. Dbt docs are also generated and hosted on machine. Link to the dbt docs is http://40.88.5.13:8080. In case if link is not working that might be due to hosted machine is down. You can reach me out, I will make sure machine is up and link is working as expected.
+I have setup virtual machine on azure using terraform and done required installations. Dbt docs are also generated and hosted on machine. Link to the dbt docs is http://40.121.141.175:8080. In case if link is not working that might be due to hosted machine is down. You can reach me out, I will make sure machine is up and link is working as expected.
 
 Following points are implemented 
 1. Data Filteration
