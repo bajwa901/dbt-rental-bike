@@ -108,6 +108,5 @@ By analysing the rental bike data I have following observations
 ### Reference
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
 - Architecture [Diagram](https://raw.githubusercontent.com/fishtown-analytics/dbt/6c6649f9129d5d108aa3b0526f634cd8f3a9d1ed/etc/dbt-arch.png)
-- https://www.youtube.com/watch?v=snp2hxxWgqk&t=1s
 - Find [dbt events](https://events.getdbt.com) near you
 - Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
